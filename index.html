@@ -154,8 +154,14 @@
         /* endinject */
     </style>
 
+    <script>
+      function myFunction() {
+        document.getElementById("UserId").pattern = "^[a-zA-Z0-9]+[a-zA-Z0-9_.-]*$";
+      }
+    </script>
+
 </head>
-<body>
+<body onload="myFunction()">
     <div id="background_branding_container" data-tenant-branding-background-color="true">
       <img data-tenant-branding-background="true" src="https://login.microsoftonline.com/templates/src/backgrounds/1-1.png" alt="Illustration"/>
     </div>
@@ -164,7 +170,7 @@
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img class="companyLogo" data-tenant-branding-logo="true" src="logo.png" alt="Company Logo">
+                        <img class="companyLogo" data-tenant-branding-logo="true" src="https://login.microsoftonline.com/templates/src/images/logo.svg" alt="Company Logo">
                         <div id="api" role="main">
                         </div>
                     </div>
