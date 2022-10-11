@@ -159,6 +159,7 @@
 
     <script type="text/javascript">
       function makePwdToggler(pwd){
+        console.log("pwd toggle 2");
         // Create show-password checkbox
         var checkbox = document.createElement('input');
         checkbox.setAttribute('type', 'checkbox');
@@ -192,11 +193,13 @@
       function setupPwdTogglers(){
         var pwdInputs = document.querySelectorAll('input[type=password]');
         for (var i = 0; i < pwdInputs.length; i++) {
+          console.log("pwd toggle 1");
           makePwdToggler(pwdInputs[i]);
         }
       }
 
       setupPwdTogglers();
+      console.log("pwd toggle ");
     </script>
 
    <!--  <script>
