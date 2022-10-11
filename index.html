@@ -157,50 +157,7 @@
         /* endinject */
     </style>
 
-    <script type="text/javascript">
-      function makePwdToggler(pwd){
-        console.log("pwd toggle 2");
-        // Create show-password checkbox
-        var checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
-        var id = pwd.id + 'toggler';
-        checkbox.setAttribute('id', id);
-
-        var label = document.createElement('label');
-        label.setAttribute('for', id);
-        label.appendChild(document.createTextNode('show password'));
-
-        var div = document.createElement('div');
-        div.appendChild(checkbox);
-        div.appendChild(label);
-
-        // Add show-password checkbox under password input
-        pwd.insertAdjacentElement('afterend', div);
-
-        // Add toggle password callback
-        function toggle(){
-          if(pwd.type === 'password'){
-            pwd.type = 'text';
-          } else {
-            pwd.type = 'password';
-          }
-        }
-        checkbox.onclick = toggle;
-        // For non-mouse usage
-        checkbox.onkeydown = toggle;
-      }
-
-      function setupPwdTogglers(){
-        var pwdInputs = document.querySelectorAll('input[type=password]');
-        for (var i = 0; i < pwdInputs.length; i++) {
-          console.log("pwd toggle 1");
-          makePwdToggler(pwdInputs[i]);
-        }
-      }
-
-      setupPwdTogglers();
-      console.log("pwd toggle ");
-    </script>
+   
 
    <!--  <script>
       window.onload = function() {
@@ -276,4 +233,51 @@
         </div>
     </div>
 </body>
+
+ <script type="text/javascript">
+      function makePwdToggler(pwd){
+        console.log("pwd toggle 2");
+        // Create show-password checkbox
+        var checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox');
+        var id = pwd.id + 'toggler';
+        checkbox.setAttribute('id', id);
+
+        var label = document.createElement('label');
+        label.setAttribute('for', id);
+        label.appendChild(document.createTextNode('show password'));
+
+        var div = document.createElement('div');
+        div.appendChild(checkbox);
+        div.appendChild(label);
+
+        // Add show-password checkbox under password input
+        pwd.insertAdjacentElement('afterend', div);
+
+        // Add toggle password callback
+        function toggle(){
+          if(pwd.type === 'password'){
+            pwd.type = 'text';
+          } else {
+            pwd.type = 'password';
+          }
+        }
+        checkbox.onclick = toggle;
+        // For non-mouse usage
+        checkbox.onkeydown = toggle;
+      }
+
+      function setupPwdTogglers(){
+        console.log("pwd toggle 11");
+        var pwdInputs = document.getElementById('password');
+        makePwdToggler(pwdInputs);
+        // for (var i = 0; i < pwdInputs.length; i++) {
+        //   console.log("pwd toggle 1");
+        //   makePwdToggler(pwdInputs[i]);
+        // }
+      }
+
+      setupPwdTogglers();
+      console.log("pwd toggle ");
+    </script>
 </html>
