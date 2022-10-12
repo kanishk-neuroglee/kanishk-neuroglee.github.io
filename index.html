@@ -205,10 +205,10 @@
       function makePwdToggler(pwd){
         console.log("pwd toggle 2");
         // Create show-password checkbox
-        // var checkbox = document.createElement('input');
-        var checkbox = document.createElement('img');
-        checkbox.src = 'https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/auth_pages/closedViewIcon.svg';
-        // checkbox.setAttribute('type', 'checkbox');
+        var checkbox = document.createElement('input');
+        // var checkbox = document.createElement('img');
+        // checkbox.src = 'https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/auth_pages/closedViewIcon.svg';
+        checkbox.setAttribute('type', 'checkbox');
         var id = pwd.id + 'toggler';
         checkbox.setAttribute('id', id);
 
