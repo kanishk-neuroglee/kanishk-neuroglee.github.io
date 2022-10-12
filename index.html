@@ -205,21 +205,23 @@
       function makePwdToggler(pwd){
         console.log("pwd toggle 2");
         // Create show-password checkbox
-        var checkbox = document.createElement('input');
-        checkbox.setAttribute('type', 'checkbox');
+        // var checkbox = document.createElement('input');
+        var checkbox = document.createElement('img');
+        img.setAttribute('src', 'https://stg-ng-api-conn-uploads.s3.ap-southeast-2.amazonaws.com/auth_pages/closedViewIcon.svg')
+        // checkbox.setAttribute('type', 'checkbox');
         var id = pwd.id + 'toggler';
         checkbox.setAttribute('id', id);
 
-        var label = document.createElement('label');
-        label.setAttribute('for', id);
-        label.appendChild(document.createTextNode('show password'));
+        // var label = document.createElement('label');
+        // label.setAttribute('for', id);
+        // label.appendChild(document.createTextNode('show password'));
 
-        var div = document.createElement('div');
-        div.appendChild(checkbox);
-        div.appendChild(label);
+        // var div = document.createElement('div');
+        // div.appendChild(checkbox);
+        // div.appendChild(label);
 
         // Add show-password checkbox under password input
-        pwd.insertAdjacentElement('afterend', div);
+        pwd.insertAdjacentElement('beforeend', checkbox);
 
         // Add toggle password callback
         function toggle(){
